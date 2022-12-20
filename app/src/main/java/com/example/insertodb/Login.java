@@ -32,7 +32,8 @@ public class Login extends AppCompatActivity {
                 String pass = password.getText().toString();
 
                 if (TextUtils.isEmpty(user) || TextUtils.isEmpty(pass)){
-                    Toast.makeText(Login.this,"Tous les champs sont obligatoires",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Login.this,"Tous les champs sont obligatoires",
+                            Toast.LENGTH_SHORT).show();
 
                 }else{
                     Boolean checkuserpass = DB.checkUsernamePassword(user,pass);

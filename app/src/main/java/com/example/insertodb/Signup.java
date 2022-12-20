@@ -44,17 +44,21 @@ public class Signup extends AppCompatActivity {
                         if (!checkusername) {
                             Boolean insert = DB.insertData(user,pass);
                             if(insert){
-                                Toast.makeText(Signup.this,"Enregistré avec succès",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Signup.this,"Enregistré avec succès",
+                                        Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                 startActivity(intent);
                             }else{
-                                Toast.makeText(Signup.this,"échec de l'enregistrement",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Signup.this,"échec de l'enregistrement",
+                                        Toast.LENGTH_SHORT).show();
                             }
                         }else{
-                            Toast.makeText(Signup.this,"Le nom existe déjà",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Signup.this,"Le nom existe déjà",
+                                    Toast.LENGTH_SHORT).show();
                         }
                     }else{
-                        Toast.makeText(Signup.this,"Les mots de passe ne correspondent pas",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Signup.this,"Les mots de passe ne correspondent pas",
+                                Toast.LENGTH_SHORT).show();
                     }
                 }
             }
